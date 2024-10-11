@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+
+# Datos proporcionados: altura (h en pies) y temperatura (T en °F)
+data = {
+    'h (ft)': [-1000, 0, 3000, 8000, 15000, 22000, 28000],
+    'T (°F)': [213.9, 212, 206.2, 196.2, 184.4, 172.6, 163.1]
+}
+
+# Crear un DataFrame con los datos
+df = pd.DataFrame(data)
+
+# Convertir la tabla a Excel para agregar las diferencias divididas y la interpolación.
+file_path = "/mnt/data/interpolacion_newton.xlsx"
+df.to_excel(file_path, index=False)
+
+file_path
